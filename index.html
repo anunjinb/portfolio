@@ -39,10 +39,10 @@
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        header{
+
+        header {
             margin-bottom: 5rem;
         }
-    
 
         .logo {
             font-size: 1.8rem;
@@ -81,35 +81,53 @@
             object-fit: cover;
             border: 5px solid var(--primary-color);
         }
+
         .hero-content {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 2rem;
+            flex-direction: column;
+            align-items:safe;
+            justify-content: left;
+            margin-top: 0.5rem;
         }
+
         .hero-content h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
             font-weight: bold;
             text-transform: uppercase;
             background: linear-gradient(90deg, #d4b1fc, #ae71e7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-indent: 20px;
+            margin-bottom: 20px;
         }
+
+        .hero-content .hero-description {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.1rem; 
+            margin-top: 30px;/* Adds space between the text and the button */
+        }
+
         .hero-content .btn {
-            margin-top: 1rem;
-        }
+        margin-top: 1.5rem; 
+        margin-left: 30px;
+        
+    }
+
+
         .hero-img h2 {
             font-size: 1.5rem;
             color: var(--primary-color);
             text-align: center;
             margin-top: 1rem;
         }
+
         .hero-content p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 10rem;
+            margin-left: 10rem;
         }
-
 
         nav {
             display: flex;
@@ -121,84 +139,83 @@
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--background-color);
-            padding: 0.5rem 2rem;  
-            border-radius: 25px; 
+            padding: 0.5rem 2rem;
+            border-radius: 25px;
             font-weight: bold;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            letter-spacing: 1px;  
-            font-size: 1.1rem;  
-            text-align: center; 
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            text-align: center;
             margin-bottom: 25px;
             margin-left: auto;
             margin-right: 30px;
         }
 
-
         .btn:hover {
             background-color: var(--secondary-text-color);
-            transform: translateY(-3px);  
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-
         .btn:focus {
-            outline: 3px solid var(--secondary-text-color);  
+            outline: 3px solid var(--secondary-text-color);
             box-shadow: 0 0 5px var(--secondary-text-color);
         }
 
-
         .btn:active {
-        transform: translateY(4px);  
+            transform: translateY(4px);
         }
 
-
         @media (max-width: 768px) {
-        .btn {
-        padding: 0.5rem 1.5rem;  /* Adjust padding for smaller screens */
-        font-size: 1rem;  /* Slightly smaller text for better fitting */
-         }
+            .btn {
+                padding: 0.5rem 1.5rem;
+                font-size: 1rem;
+            }
         }
 
         #about {
-            display: flexbox; /* Make the content flexbox */
-            align-items: center; /* Vertically align items */
-            justify-content: space-between; /* Distribute space between items */
-            padding: 4rem 2rem; /* Add some padding */
-            text-align: left; /* Align text to the left */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 2rem;
+            text-align: left;
         }
-        #about h2{
+
+        #about h2 {
             margin-top: 50px;
             margin-bottom: 10px;
             text-align: center;
         }
 
         .about-content {
-            display:flex;
-            justify-content:space-between ;
-            align-items: center; /* Vertically center the items */
-            gap: 3rem; /* Space between the profile picture and text */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
         }
+
         .about-text {
             flex: 1;
-            padding-right: 2rem; /* Space between text and image */
+            padding-right: 2rem;
         }
+
         .profile-pic {
-            max-width: 350px; /* Control the size of the profile image */
+            max-width: 350px;
             height: 400px;
-            border-radius: 10%; /* Make it circular */
+            border-radius: 10%;
             object-fit: cover;
             border: 5px solid var(--primary-color);
         }
 
         .about-text {
-            max-width: 600px; /* Limit the text width for readability */
+            max-width: 600px;
         }
 
         .about-text p {
-        font-size: 1.1rem;
-        color: var(--secondary-text-color);
-        margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 1.5rem;
         }
 
         section {
@@ -242,26 +259,33 @@
             color: var(--primary-color);
             background-color: rgba(48, 25, 52, 0.8);
         }
-        #contact a{
+
+        #contact a {
             color: lightpink;
             text-decoration: underline;
         }
-
     </style>
 </head>
-<main>
 <body>
     <header>
         <div class="logo">Portfolio</div>
-        <nav
-            class="top-nav">
-                <a href="#about" class="btn">About</a>
-                <a href="#projects" class="btn">Projects</a>
-                <a href="#contact" class="btn">Contact</a>
+        <nav>
+            <a href="#about" class="btn">About</a>
+            <a href="#projects" class="btn">Projects</a>
+            <a href="#contact" class="btn">Contact</a>
         </nav>
     </header>
 
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Anunjin Batdelger</h1>
+            <p class="hero-description">Designer | Developer | Innovator</p>
+            <a href="#projects" class="btn" title="View my work">See My Work!</a>
+        </div>
+        <img src="images/profile-picture.jpg.jpg" alt="Anunjin Batdelger" class="profile-pic" loading="lazy">
+    </section>
     
+
     <section id="about">
         <h2>About Me ⭐</h2>
         <div class="about-content">
@@ -273,40 +297,18 @@
             <img src="images/profile-picture.jpg.jpg" alt="Anunjin Batdelger" class="profile-pic" loading="lazy">
         </div>
     </section>
-    
-    <div class="hero-content">
-        <h1>Anunjin Batdelger</h1>
-        <p>Designer | Developer | Innovator</p>
-        <a href="#projects" class="btn" title="View my work"> See My Work!</a>
-    </div>
-    
+
     <section id="projects">
         <h2>My Projects 💻⭐</h2>
         <div class="project-grid">
             <div class="project-item">
-                <h3>Home-Made Food App</h3>
-                <p>An Android app that lets users browse recipes, manage shopping lists, and more.</p>
-            </div>
-            <div class="project-item">
-                <h3>Testing Automation System</h3>
-                <p>Designed scripts to automate batch testing for complex interconnected systems.</p>
-            </div>
-        </div>
+                <h3>Home-Made Food App</h3
+                </div>       
+    </div>
     </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-            <span class="highlight">
-                Feel free to reach out to me via email at 
-                <a href="mailto:batdelge002@gannon.edu">batdelge002@gannon.edu</a>.
-            </span>
-        </p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Anunjin Batdelger. All rights reserved.</p>
-    </footer>
-</body>
-</main>
-</html>
+
+<footer>
+    <p>&copy; 2024 Anunjin Batdelger. All rights reserved.</p>  
+    <p>Contact me at <a href="mailto:batdelge002@gannon.edu">batdelge002@gannon.edu</a></p>
+</footer>
+                    
