@@ -77,16 +77,17 @@ nav ul li a:hover {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
 .hero-content {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     justify-content: center;
     max-width: 600px;
-    /*height: 100vh; /* Make the section full screen */
     padding-left: 1rem;
 }
+
 .profile-pic {
     flex: 1;
     max-width: 400px;
@@ -96,7 +97,8 @@ nav ul li a:hover {
     border: 5px solid var(--primary-color);
     align-self: center;
 }
-.hero-content h1 { /* Uppercased  my name */
+
+.hero-content h1 {
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -105,21 +107,50 @@ nav ul li a:hover {
     -webkit-text-fill-color: transparent;
     text-indent: 20px;
 }
-.hero-content p { /* text section abve button*/
-    font-size: 30px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+
+.hero-content p {
+    font-size: 1.5rem;  /* Adjusted size for better readability */
+    margin: 5px 0;
     margin-left: 15px;
 }
+
 .hero-content .btn {
-    margin-top: 0.5rem; 
-    margin-left: 17px;
+    margin-top: 1rem;
+    padding: 12px 25px;
+    background-color: #E6E6FA;  /* Updated background color */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
+
+.hero-content .btn:hover {
+    background-color: #7f6085;  /* Darker shade on hover */
+}
+
 .hero-img h2 {
     font-size: 1.5rem;
     color: var(--primary-color);
     text-align: center;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;  /* Smaller heading for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;  /* Smaller text for mobile */
+    }
+
+    .hero-content .btn {
+        font-size: 1rem;  /* Smaller button text */
+        padding: 10px 20px;  /* Adjust button size */
+    }
 }
 
 nav {
